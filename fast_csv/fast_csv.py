@@ -28,7 +28,7 @@ def reduce_data(data):
         elif col_type == 'object':
             num_unique_values = len(data[col].unique())
             num_total_values = len(data[col])
-            if num_unique_values / num_total_values < 0.5:
+            if num_unique_values / num_total_values <= 0.5:
                 data.loc[:, col] = data[col].astype('category')
             else:
                 data.loc[:, col] = data[col]
