@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/YUX-IO/fast_csv.svg?branch=master)](https://travis-ci.com/YUX-IO/fast_csv)
 ## requirements
 
 - Pandas
