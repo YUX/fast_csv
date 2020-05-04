@@ -6,7 +6,9 @@ before_script:
   - pip install coveralls
   - pip install numpy
   - pip install pandas
-script: coverage run test_fast_csv.py
+script:
+  - coverage run test_fast_csv.py
+  - coverage report -m
 after_success:
   - coveralls
 deploy:
