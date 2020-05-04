@@ -10,14 +10,3 @@ script:
 - coverage run test_fast_csv.py
 after_success:
 - coveralls
-deploy:
-  skip_existing: true
-  provider: pypi
-  user: yux-io
-  password:
-    secure: L+sgIvB26vqlV6iehNFWnV+BCSMEVukmH324dkL5fZxRkQB3Wk+FVhAuT3K0T2YYDAqWdNtEo9PLE0HUqG2Et5rbo2Gh2LcvRSsMWfnhaamiRfQWAAuxG6GYb5TQTlBAQudkBXAyrj2vt/ASJT2GqxCHd3ieCL5+n0IGPyT6pXljJAiHMMhxTfZ1jjEE9/UuME6BZdqul1t0wAf7AMdA07xnzSeoOU9yks7ilzvO+yGnbg3UXS96dB0zYR8OcQzdZm+yA1rdMqxiucail9lw7Q0D7KnKuLkKpnkOLqiGKSFVP15v+ZSSoPfJ7BaN2jhsfZo0U0kAznHsOMyUilj7eyENIrNvfkydxz1agBVVKSKdBAocVj1DqGeATBEZy/FY9Tr2PGwUBY89xQdN0rfsC6TNNRExsXa8K0eWgGugSa5zq85Ex17maie3MdKfwQlH19cBzmZTOa/Fg/4IX/jL9Is3oe4BRkryeSYdr6xHS0JfjemqJmw76ntb3DvdHo0tLG/nfQVHBgP40hsKXtiX4wQU8HW8lRS1Ie7Djd6Y1OJgWsUGXkAIAOzWZACJ48L6uzXlEQCj4dNHkai73u/oAkYFt18Q2Tg+hkswofXXOa9OHzFSQdntdjJCg/cMGuuHQux7uKuPcc5PHWyOeA11JdWiM49Qq0MO4xoz0iGe4lI=
-  on:
-    tags: false
-    distributions: sdist bdist_wheel
-    repo: YUX-IO/fast_csv
-  skip_cleanup: 'true'

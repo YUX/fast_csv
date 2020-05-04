@@ -5,6 +5,7 @@ with open(("README.md"), encoding='utf-8') as f:
 
 setup(
     name='fast_csv',
+    version='1.3.1',
     packages=find_packages(),
     url='https://github.com/YUX-IO/fast_csv',
     license='MIT',
