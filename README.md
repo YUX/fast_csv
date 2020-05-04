@@ -22,4 +22,3 @@ See `data.info()`
 
 - it reduces 50% of memory usage on average
 - it reduces 90%+ of memory usage on a good day
-

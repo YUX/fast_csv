@@ -1,0 +1,22 @@
+language: python
+python:
+  - 3.7
+before_script:
+  - pip install coverage
+  - pip install coveralls
+  - pip install numpy
+  - pip install pandas
+script: coverage run test_fast_csv.py
+after_success:
+  - coveralls
+deploy:
+  skip_existing: true
+  provider: pypi
+  user: yux-io
+  password:
+    secure: uGHK/ztcbzSBPWn9yiFRdy3HRybcTRAwxptyVaI3J/26eFxyO62teTEI0jNpQfy/sjaAAq8c0/Q8IxHEs6WnkPHnHec7aK42DaCCMqRS36CX2AGdgF03CoGDCNxPP+N1Bl5QlJ+DPMPO0PXaDAiCidAKmgiRiH59engpxZw4vGajeYsw6rzbofkOJzvwu5j/fKXUdlUUNXHfyfV6nScE6y/KsBCMmb0eXbdzY8SqYd8+7AujWNhgEEXsEy8X9Lc28dJxPAf2NlfXYRYcUKcRiuRp5mP4IL9wmI7y5VqeR3iHnKfp7tOhWDDE8vX9BVSgSUHrzIQtbKG2rxI5qdiDKx9HZJEC8/rp5Kr2LH0rSboTOpBuDSigmJNXujhhkmOhgAwWhl+lDuz7ibK7vIavgB6AQFNazzj5C8CmQLylMA6gRmqHep16s8M/wyFecLr0QExayc/i+qZI2NAEexXeqm5RkqRzmAtoofC/4jpKzZIbdaELHDeLW9/Hr2D91iNQzu8JCaDMkp5+1X2McS2FR4FFnDS7/FCNgOwNX/JqCudvqp5hO5qdIiznChj7QWFywQLrcbJtGmfSei2H7h/XUWhpwUcGaFA+ZL7eMHzLKx88fvtVr42VB9oW/bLjIlW4PUeE2PJbRuomT9nPVH8/IUJC/Oopl8dlvIAdVWXLpis=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: YUX-IO/fast_csv
+  skip_cleanup: 'true'
