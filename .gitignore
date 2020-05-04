@@ -79,3 +79,7 @@ fabric.properties
 .idea/modules.xml
 .idea/other.xml
 .idea/vcs.xml
+.DS_Store
+build/
+dist/
+fast_csv.egg-info/
