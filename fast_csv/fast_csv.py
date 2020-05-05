@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def reduce_data(data):
+def compression(data):
 
     for col in data.columns:
         col_type = data[col].dtypes

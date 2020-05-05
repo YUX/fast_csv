@@ -7,6 +7,6 @@ before_script:
 - pip install numpy
 - pip install pandas
 script:
-- coverage run test_fast_csv.py
+- coverage run --source=fast_csv test_fast_csv.py
 after_success:
 - coveralls
