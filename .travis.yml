@@ -11,9 +11,12 @@ script:
 after_success:
 - coveralls
 deploy:
-  - provider: pypi
-    user: yux-io
-    password: ${PYPI_PASSWORD}
-    on:
-      tags: true
-      branch: master
+  skip_existing: true
+  provider: pypi
+  user: yux-io
+  password: ${PYPI_PASSWORD}
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: YUX-IO/fast_csv
+  skip_cleanup: 'true'
