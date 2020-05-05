@@ -10,3 +10,10 @@ script:
 - coverage run --source=fast_csv test_fast_csv.py
 after_success:
 - coveralls
+deploy:
+  - provider: pypi
+    user: yux-io
+    password: ${PYPI_PASSWORD}
+    on:
+      tags: true
+      branch: master

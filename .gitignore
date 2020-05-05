@@ -83,3 +83,4 @@ fabric.properties
 build/
 dist/
 fast_csv.egg-info/
+!/.coverage
